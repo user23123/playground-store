@@ -1,0 +1,13 @@
+*.pyc
+*.pyo
+__pycache__/
+.DS_Store
+/.idea/
+/.vscode/
+/.allure/
+/node_modules/
+/npm-debug.log
+/npm-shrinkwrap.json
+/package-lock.json
+/target/
+/yarn-error.log
