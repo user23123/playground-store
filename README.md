@@ -9,5 +9,5 @@
 4. Install necessary items
   > pip install requirements.txt
 5. Run tests
-  > pytest <path to test file>/<filename>.py
+  > pytest "<path to test file>/<filename>.py"
 
