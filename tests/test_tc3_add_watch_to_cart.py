@@ -48,8 +48,8 @@ class TestAddWatchToCart():
         search_bar_element.send_keys(Keys.RETURN)
 
         logger.info("Verify \'watch\' search results page is displayed")
-        breathe_easy_search_pg = "https://magento.softwaretestingboard.com/catalogsearch/result/?q=watch"
-        assert chrome_driver.current_url == breathe_easy_search_pg
+        watch_search_pg = "https://magento.softwaretestingboard.com/catalogsearch/result/?q=watch"
+        assert chrome_driver.current_url == watch_search_pg
 
         logger.info("Wait for \'Dash Digital Watch\' to be present")
         dd_watch_image = "//div[@class='product-item-info']//img[@alt='Dash Digital Watch']"
@@ -109,3 +109,8 @@ class TestAddWatchToCart():
         WebDriverWait(chrome_driver, 10).until(EC.presence_of_element_located((By.XPATH, dd_watch_product_title)))
         dd_watch_product_title_element = chrome_driver.find_element("xpath", dd_watch_product_title)
         assert dd_watch_product_title_element.is_displayed()
+        # Product image
+        logger.info("Wait for \'Dash Digital Watch\' to be present")
+        dd_watch_image = "//div[@class='product-item-info']//img[@alt='Dash Digital Watch']"
+        WebDriverWait(chrome_driver, 10).until(EC.presence_of_element_located((By.XPATH, dd_watch_image)))
+        assert dd_watch_image.is_displayed()
